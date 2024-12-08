@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="https://fonts.cdnfonts.com/css/tt-lakes-neue-trial" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="nav">
+            <ul class="nav__items">
+                <li class="nav-link active">Ремонт техники</li>
+                <li class="nav-link">Услуги и сервисы</li>
+                <li class="nav-link">Корпоративным клиентам</li>
+                <li class="nav-link">Продавцам техники</li>
+                <li class="nav-link">Партнерам</li>
+                <li class="nav-link">Производителям</li>
+                <li class="nav-link">Наши сервисные центры</li>
+                <li class="nav-link">Контакты</li>
+            </ul>
+            <div class="nav__contacts">
+                <div class="nav__contacts-item">
+                    <div class=" item-icon nav-icon">
+                        <img class="icon" src="img/icon2.svg" alt="">
+                    </div>
+                    <div class=" item-icon nav-icon">
+                        <img class="icon" src="img/icon3.svg" alt="">
+                    </div>
+                    <div class=" item-icon nav-icon">
+                        <img class="icon" src="img/icon4.svg" alt="">
+                    </div>
+                </div>
+                <div class="nav__contacts-item">
+                    <p class="nav-email">mail@cps.com</p>
+                </div>
+                <div class="nav__contacts-item">
+                    <p class="nav-tel">8 800 890 8900</p>
+                </div>
+                <div class="nav__contacts-lang">
+                    <p class="lang-ru active">RU</p>
+                    <p class="lang-en">EN</p>
+                    <p class="lang-ch">CH</p>
+                </div>
+            </div>
+        </div>
+        <div class="header">
+            <div class="header__left">
+                <div class="header__left-item item-icon burger-toggle" id="nav-burger">
+                    <img class="icon" src="img/icon1.svg" alt="">
+                </div>
+                <div class="header__left-item item-icon burger-close" id="nav-burger-close">
+                    <img src="img/icon.svg" alt="menu">
+                </div>
+                <div class="header__left-item item-pipe"></div>
+                <div class="header__left-item item-logo">
+                    <img class="logo" src="img/logo.svg" alt="">
+                </div>
+            </div>
+            <div class="header__right">
+                <div class="header__right-item item-icon contact-icon">
+                    <img class="icon" src="img/icon2.svg" alt="">
+                </div>
+                <div class="header__right-item item-icon contact-icon">
+                    <img class="icon" src="img/icon3.svg" alt="">
+                </div>
+                <div class="header__right-item item-icon contact-icon">
+                    <img class="icon" src="img/icon4.svg" alt="">
+                </div>
+                <div class="header__right-item  item-pipe"></div>
+                <div class="header__right-item item-icon ">
+                    <img class="icon" src="img/icon5.svg" alt="">
+                </div>
+                <div class="header__right-item item-icon ">
+                    <img class="icon" src="img/icon6.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const nav = document.querySelector('.nav');
+            const navClose = document.querySelector('.burger-close');
+            
+            document.querySelector('#nav-burger').onclick = () =>{
+                nav.classList.toggle('active');
+                navClose.classList.toggle('active');
+            }
+            document.querySelector('#nav-burger-close').onclick = () =>{
+                navClose.classList.remove('active');
+                nav.classList.toggle('active');
+            }
+        </script>
+    </body>
+</html>
