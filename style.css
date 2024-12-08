@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 li::marker {
     content: none;
 }
@@ -102,7 +101,10 @@ li::marker {
     background: #EAEAEA;
 }
 
-.nav-bar{
+
+
+
+.nav-bar {
     background: #FF3E79;
     width: 40px;
     height: 40px;
@@ -112,22 +114,40 @@ li::marker {
 
 }
 
+.nav__header {
+    display: flex;
+    padding: 0 24px;
+    align-items: center;
+}
+
+.nav__header>.item-icon:last-child {
+    margin: 0;
+    position: absolute;
+    right: 24px;
+}
+
 
 .nav {
-    position: absolute;
-    min-height: 100vh;
     background: #FFFFFF;
-    /* z-index: 1; */
-    top: 99px;
-    left: 0;
+    min-height: 100%;
+    z-index: 5;
     width: 320px;
     box-shadow: 10px 0px 30px 0px #454F7E05, 10px 0px 30px 0px #0E185033;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 32px 0;
+    padding: 24px 0;
     transform: translate(-320px);
-    transition: 0.2s linear
+    transition: 0.2s linear;
+    font-family: 'TT Lakes Neue Trial';
+    font-weight: 500;
+    position: fixed;
+    overflow: auto;
+
+
+}
+
+.nav__items {
+    margin-top: 46px;
 }
 
 .nav-link:first-child {
@@ -154,11 +174,12 @@ li::marker {
     width: max-content;
 }
 
-.nav-link.active{
+.nav-link.active {
     color: #7E7E82;
 
 }
-.nav-link.active::after{
+
+.nav-link.active::after {
     border-right: 5px solid #41F6D7;
 
 }
@@ -186,7 +207,9 @@ li::marker {
 }
 
 .nav-tel {
-    font-weight: 600;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 32px;
 }
 
 .nav__contacts-lang {
@@ -210,30 +233,27 @@ li::marker {
 .nav.active {
     transform: translateX(0);
 }
-.burger-toggle{
+
+.burger-toggle {
     opacity: 1;
     z-index: 2;
     transition: 0.2s linear;
 }
-.burger-close{
-    position: absolute;
+
+.burger-close {
     left: 8px;
-    opacity: 0;
-    z-index: 0;
     transition: 0.2s linear;
-    
+
 }
-.burger-close.active{
+
+.burger-close.active {
     z-index: 3;
     opacity: 1;
 
 }
 
 @media (320px <=width <=1120px) {
-    /* .header {
-        padding: 24px 16px;
-        display: flex;
-    } */
+
 
     .container {
         padding: 40px 24px;
@@ -281,6 +301,11 @@ li::marker {
     .picture3 {
         display: none;
     }
+
+    .nav__contacts {
+        margin-top: 268px;
+    }
+
 
 
 }
@@ -345,5 +370,8 @@ li::marker {
     .picture1,
     .picture2 {
         display: none;
+    }
+    .nav__contacts {
+        margin-top: 0px;
     }
 }
