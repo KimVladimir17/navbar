@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body.lock{
+    overflow: hidden;
+}
+
 li::marker {
     content: none;
 }
@@ -19,6 +23,7 @@ li::marker {
 .logo {
     cursor: pointer;
 }
+
 
 .main {
     background: #F8F8F8;
@@ -40,12 +45,14 @@ li::marker {
 
 .header {
     padding: 24px 24px;
-    max-width: 100%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     position: relative;
     align-items: center;
     background: #fff;
+    position: fixed;
+    border-bottom: 1px solid #D9FFF5;
 }
 
 
@@ -128,8 +135,11 @@ li::marker {
 
 
 .nav {
+    position: absolute;
+    top: 0;
+    left: 0;
     background: #FFFFFF;
-    min-height: 100%;
+    height: 100vh;
     z-index: 5;
     width: 320px;
     box-shadow: 10px 0px 30px 0px #454F7E05, 10px 0px 30px 0px #0E185033;
@@ -140,10 +150,9 @@ li::marker {
     transition: 0.2s linear;
     font-family: 'TT Lakes Neue Trial';
     font-weight: 500;
-    position: fixed;
     overflow: auto;
-
-
+    position: fixed;
+    
 }
 
 .nav__items {
@@ -234,22 +243,8 @@ li::marker {
     transform: translateX(0);
 }
 
-.burger-toggle {
-    opacity: 1;
-    z-index: 2;
-    transition: 0.2s linear;
-}
-
 .burger-close {
     left: 8px;
-    transition: 0.2s linear;
-
-}
-
-.burger-close.active {
-    z-index: 3;
-    opacity: 1;
-
 }
 
 @media (320px <=width <=1120px) {
