@@ -8,12 +8,12 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="nav">
+        <nav class="nav">
             <div class="nav__header">
-                <div class="item-icon  nav-icon burger-close" id="nav-burger-close">
+                <div class="item-icon  nav-icon burger-close nav-burger-close">
                     <img src="img/icon.svg" alt="menu">
                 </div>
-                <div class="item-logo" >
+                <div class="item-logo">
                     <img class="logo" src="img/logo.svg" alt="">
                 </div>
                 <div class="item-icon nav-icon">
@@ -54,10 +54,10 @@
                     <p class="lang-ch">CH</p>
                 </div>
             </div>
-        </div>
+        </nav>
         <div class="header">
             <div class="header__left">
-                <div class="header__left-item item-icon burger-toggle" id="nav-burger">
+                <div class="header__left-item item-icon burger-toggle nav-burger">
                     <img class="icon" src="img/icon1.svg" alt="">
                 </div>
                 <div class="header__left-item item-pipe"></div>
@@ -84,23 +84,25 @@
                 </div>
             </div>
         </div>
-
-        <div class="main">
-            
-        </div>
-
+        <div class="main">lorem*1000</div>
         <script>
             const nav = document.querySelector('.nav');
-            const navClose = document.querySelector('.burger-close');
+            const navBurger = document.querySelector('.nav-burger');
+            const navClose = document.querySelector('.nav-burger-close');
+            const body = document.body;
+
+            if(navBurger && navClose){
+                navBurger.addEventListener('click', () => {
+                    nav.classList.toggle('active');
+                    body.classList.toggle('lock');
+                })
+                navClose.addEventListener('click', () => {
+                    nav.classList.toggle('active');
+                    body.classList.toggle('lock');
+                })
+            }
+
             
-            document.querySelector('#nav-burger').onclick = () =>{
-                nav.classList.toggle('active');
-                navClose.classList.toggle('active');
-            }
-            document.querySelector('#nav-burger-close').onclick = () =>{
-                navClose.classList.remove('active');
-                nav.classList.toggle('active');
-            }
         </script>
     </body>
 </html>
