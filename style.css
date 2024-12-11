@@ -221,6 +221,10 @@ li::marker {
     line-height: 32px;
 }
 
+.nav__contacts {
+    margin-top: 241px;
+}
+
 .nav__contacts-lang {
     margin-top: 24px;
     display: flex;
@@ -238,6 +242,7 @@ li::marker {
 .nav__contacts-lang>p.active {
     color: #7E7E82;
 }
+
 
 .nav.active {
     transform: translateX(0);
@@ -296,12 +301,9 @@ li::marker {
     .picture3 {
         display: none;
     }
-
     .nav__contacts {
         margin-top: 268px;
     }
-
-
 
 }
 
@@ -368,5 +370,8 @@ li::marker {
     }
     .nav__contacts {
         margin-top: 0px;
+    }
+    .nav__contacts-lang {
+        margin-bottom: 50px;
     }
 }
